@@ -46,7 +46,7 @@ function addElement() {
 
 addElement()
 
-/*
+
 function bodycolor () {
   let bodycol = document.body;
   if (bodycol.style.backgroundColor ==="white"){
@@ -57,5 +57,5 @@ function bodycolor () {
  bodycol.style.backgroundColor ="black";
   }
 bodycolor();
-*/
+
 

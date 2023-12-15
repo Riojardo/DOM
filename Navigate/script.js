@@ -67,8 +67,8 @@ function MoveH2 (){
   let h2section2 = section2.querySelector('h2');
   let h2section3 = section3.querySelector('h2');
 
-section2.insertBefore(h2section3,section2.p)
-section3.insertBefore(h2section2,section3.p)
+section2.insertBefore(h2section3,section2.firstChild)
+section3.insertBefore(h2section2,section3.firstChild)
 }
 MoveH2()
 
