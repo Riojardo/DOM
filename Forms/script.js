@@ -231,30 +231,56 @@ input_age.addEventListener('input',display_truth);
 
 display_truth()
 
-function validation ()
-{
+function validation_length() {
   let code = document.querySelector('input#pwd').value;
-  let code_confirm =document.querySelector('input#pwd-confirm').value;
+  let code_input = document.querySelector('input#pwd');
   if (code.length < 6) {
-    document.querySelector('input#pwd').style.backgroundColor = "blue";
-  }else{
-    document.querySelector('input#pwd').style.backgroundColor = "";
-  }
-  if (code !== code_confirm){
-    document.querySelector("div").textContent='Passwords not Matching';
-  }else{
-    document.querySelector("div").innerHTML='';
+    code_input.style.backgroundColor = "blue";
+  } else {
+    code_input.style.backgroundColor = "";
   }
 }
 
+
+
+validation_length()
+
 let input_code = document.querySelector("input#pwd");
-input_code.addEventListener('input', validation);
+input_code.addEventListener('input', validation_length);
+
+function validation_similarity() {
+  let code = document.querySelector('input#pwd').value;
+  let code_confirm = document.querySelector('input#pwd-confirm').value;
+  let div_pwd = document.querySelector('div#pwd');
+  console.log(div_pwd);
+  if (code !== code_confirm) {
+   alert( "Passwords do not match!");
+  } else {
+  alert( "Yahooo");
+  }
+}
 
 let input_code_confirm = document.querySelector("input#pwd-confirm");
-input_code_confirm.addEventListener('input', validation);
+input_code_confirm.addEventListener('input', validation_similarity);
 
+/*
+let dark = document.getElementById("toggle-darkmode");
+function dark_mode() {
+  let value = dark.value;
+  let text = dark.options[e.selectedIndex].text;
+}
+e.onchange = onChange;
+dark_mode();
+*/
+function dark_mode() {
+  let darkscreen = document.querySelector("main");
+  darkscreen.style.backgroundColor = 'black';
+  darkscreen.style.color = 'white';
+}
+let dark = document.querySelector("select#toggle-darkmode");
+dark.addEventListener('change', dark_mode);
 
-
+console.log(dark.value + " bla bla bla");
 
 
 
